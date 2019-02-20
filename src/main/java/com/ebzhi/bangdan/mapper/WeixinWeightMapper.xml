@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ebzhi.bangdan.mapper.WeixinWeightMapper" >
+  <resultMap id="BaseResultMap" type="com.ebzhi.bangdan.entity.WeixinWeight" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="article_num_weight" property="articleNumWeight" jdbcType="INTEGER" />
+    <result column="publish_num_weight" property="publishNumWeight" jdbcType="INTEGER" />
+    <result column="read_num_avg_weight" property="readNumAvgWeight" jdbcType="INTEGER" />
+    <result column="dianzan_num_avg_weight" property="dianzanNumAvgWeight" jdbcType="INTEGER" />
+    <result column="read_num_top_weight" property="readNumTopWeight" jdbcType="INTEGER" />
+    <result column="dianzan_num_top_weight" property="dianzanNumTopWeight" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="in_use" property="inUse" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, article_num_weight, publish_num_weight, read_num_avg_weight, dianzan_num_avg_weight, 
+    read_num_top_weight, dianzan_num_top_weight, create_time, in_use
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ebzhi.bangdan.entity.WeixinWeightExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from weixin_weight
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from weixin_weight
+    where create_time = #{id,jdbcType=INTEGER}
+  </select>
+<!--根据月份查询权重-->
+  <select id="selectByLocalMonth" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from weixin_weight
+    where  = #{yearMonth,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from weixin_weight
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ebzhi.bangdan.entity.WeixinWeightExample" >
+    delete from weixin_weight
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ebzhi.bangdan.entity.WeixinWeight" >
+    insert into weixin_weight (id, article_num_weight, publish_num_weight, 
+      read_num_avg_weight, dianzan_num_avg_weight, 
+      read_num_top_weight, dianzan_num_top_weight, 
+      create_time, in_use)
+    values (#{id,jdbcType=INTEGER}, #{articleNumWeight,jdbcType=INTEGER}, #{publishNumWeight,jdbcType=INTEGER}, 
+      #{readNumAvgWeight,jdbcType=INTEGER}, #{dianzanNumAvgWeight,jdbcType=INTEGER}, 
+      #{readNumTopWeight,jdbcType=INTEGER}, #{dianzanNumTopWeight,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=VARCHAR}, #{inUse,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ebzhi.bangdan.entity.WeixinWeight" >
+    insert into weixin_weight
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="articleNumWeight != null" >
+        article_num_weight,
+      </if>
+      <if test="publishNumWeight != null" >
+        publish_num_weight,
+      </if>
+      <if test="readNumAvgWeight != null" >
+        read_num_avg_weight,
+      </if>
+      <if test="dianzanNumAvgWeight != null" >
+        dianzan_num_avg_weight,
+      </if>
+      <if test="readNumTopWeight != null" >
+        read_num_top_weight,
+      </if>
+      <if test="dianzanNumTopWeight != null" >
+        dianzan_num_top_weight,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="inUse != null" >
+        in_use,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="articleNumWeight != null" >
+        #{articleNumWeight,jdbcType=INTEGER},
+      </if>
+      <if test="publishNumWeight != null" >
+        #{publishNumWeight,jdbcType=INTEGER},
+      </if>
+      <if test="readNumAvgWeight != null" >
+        #{readNumAvgWeight,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumAvgWeight != null" >
+        #{dianzanNumAvgWeight,jdbcType=INTEGER},
+      </if>
+      <if test="readNumTopWeight != null" >
+        #{readNumTopWeight,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumTopWeight != null" >
+        #{dianzanNumTopWeight,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="inUse != null" >
+        #{inUse,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ebzhi.bangdan.entity.WeixinWeightExample" resultType="java.lang.Integer" >
+    select count(*) from weixin_weight
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update weixin_weight
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.articleNumWeight != null" >
+        article_num_weight = #{record.articleNumWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.publishNumWeight != null" >
+        publish_num_weight = #{record.publishNumWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.readNumAvgWeight != null" >
+        read_num_avg_weight = #{record.readNumAvgWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNumAvgWeight != null" >
+        dianzan_num_avg_weight = #{record.dianzanNumAvgWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.readNumTopWeight != null" >
+        read_num_top_weight = #{record.readNumTopWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNumTopWeight != null" >
+        dianzan_num_top_weight = #{record.dianzanNumTopWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inUse != null" >
+        in_use = #{record.inUse,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update weixin_weight
+    set id = #{record.id,jdbcType=INTEGER},
+      article_num_weight = #{record.articleNumWeight,jdbcType=INTEGER},
+      publish_num_weight = #{record.publishNumWeight,jdbcType=INTEGER},
+      read_num_avg_weight = #{record.readNumAvgWeight,jdbcType=INTEGER},
+      dianzan_num_avg_weight = #{record.dianzanNumAvgWeight,jdbcType=INTEGER},
+      read_num_top_weight = #{record.readNumTopWeight,jdbcType=INTEGER},
+      dianzan_num_top_weight = #{record.dianzanNumTopWeight,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=VARCHAR},
+      in_use = #{record.inUse,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ebzhi.bangdan.entity.WeixinWeight" >
+    update weixin_weight
+    <set >
+      <if test="articleNumWeight != null" >
+        article_num_weight = #{articleNumWeight,jdbcType=INTEGER},
+      </if>
+      <if test="publishNumWeight != null" >
+        publish_num_weight = #{publishNumWeight,jdbcType=INTEGER},
+      </if>
+      <if test="readNumAvgWeight != null" >
+        read_num_avg_weight = #{readNumAvgWeight,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumAvgWeight != null" >
+        dianzan_num_avg_weight = #{dianzanNumAvgWeight,jdbcType=INTEGER},
+      </if>
+      <if test="readNumTopWeight != null" >
+        read_num_top_weight = #{readNumTopWeight,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumTopWeight != null" >
+        dianzan_num_top_weight = #{dianzanNumTopWeight,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="inUse != null" >
+        in_use = #{inUse,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ebzhi.bangdan.entity.WeixinWeight" >
+    update weixin_weight
+    set article_num_weight = #{articleNumWeight,jdbcType=INTEGER},
+      publish_num_weight = #{publishNumWeight,jdbcType=INTEGER},
+      read_num_avg_weight = #{readNumAvgWeight,jdbcType=INTEGER},
+      dianzan_num_avg_weight = #{dianzanNumAvgWeight,jdbcType=INTEGER},
+      read_num_top_weight = #{readNumTopWeight,jdbcType=INTEGER},
+      dianzan_num_top_weight = #{dianzanNumTopWeight,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=VARCHAR},
+      in_use = #{inUse,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

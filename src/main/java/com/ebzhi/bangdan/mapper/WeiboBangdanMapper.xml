@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ebzhi.bangdan.mapper.WeiboBangdanMapper" >
+  <resultMap id="BaseResultMap" type="com.ebzhi.bangdan.entity.WeiboBangdan" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="year_month_time" property="yearMonthTime" jdbcType="VARCHAR" />
+    <result column="unit_id" property="unitId" jdbcType="INTEGER" />
+    <result column="weibo_uid" property="weiboUid" jdbcType="BIGINT" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="funs_num" property="funsNum" jdbcType="INTEGER" />
+    <result column="guanzhu_num" property="guanzhuNum" jdbcType="INTEGER" />
+    <result column="publish_total" property="publishTotal" jdbcType="INTEGER" />
+    <result column="period_publish_total" property="periodPublishTotal" jdbcType="INTEGER" />
+    <result column="zhuanfa_num" property="zhuanfaNum" jdbcType="INTEGER" />
+    <result column="pinglun_num" property="pinglunNum" jdbcType="INTEGER" />
+    <result column="dianzan_num" property="dianzanNum" jdbcType="INTEGER" />
+    <result column="original_num" property="originalNum" jdbcType="INTEGER" />
+    <result column="original_zhuanfa_num" property="originalZhuanfaNum" jdbcType="INTEGER" />
+    <result column="original_pinglun_num" property="originalPinglunNum" jdbcType="INTEGER" />
+    <result column="original_dianzan_num" property="originalDianzanNum" jdbcType="INTEGER" />
+    <result column="unit_province" property="unitProvince" jdbcType="VARCHAR" />
+    <result column="unit_level" property="unitLevel" jdbcType="INTEGER" />
+    <result column="unit_function" property="unitFunction" jdbcType="VARCHAR" />
+    <result column="unit_name" property="unitName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, year_month_time, unit_id, weibo_uid, nick_name, funs_num, guanzhu_num, publish_total, 
+    period_publish_total, zhuanfa_num, pinglun_num, dianzan_num, original_num, original_zhuanfa_num, 
+    original_pinglun_num, original_dianzan_num, unit_province, unit_level, unit_function, 
+    unit_name
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ebzhi.bangdan.entity.WeiboBangdanExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from weibo_bangdan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from weibo_bangdan
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from weibo_bangdan
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ebzhi.bangdan.entity.WeiboBangdanExample" >
+    delete from weibo_bangdan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ebzhi.bangdan.entity.WeiboBangdan" >
+    insert into weibo_bangdan (id, year_month_time, unit_id, 
+      weibo_uid, nick_name, funs_num, 
+      guanzhu_num, publish_total, period_publish_total, 
+      zhuanfa_num, pinglun_num, dianzan_num, 
+      original_num, original_zhuanfa_num, original_pinglun_num, 
+      original_dianzan_num, unit_province, unit_level, 
+      unit_function, unit_name)
+    values (#{id,jdbcType=INTEGER}, #{yearMonthTime,jdbcType=VARCHAR}, #{unitId,jdbcType=INTEGER}, 
+      #{weiboUid,jdbcType=BIGINT}, #{nickName,jdbcType=VARCHAR}, #{funsNum,jdbcType=INTEGER}, 
+      #{guanzhuNum,jdbcType=INTEGER}, #{publishTotal,jdbcType=INTEGER}, #{periodPublishTotal,jdbcType=INTEGER}, 
+      #{zhuanfaNum,jdbcType=INTEGER}, #{pinglunNum,jdbcType=INTEGER}, #{dianzanNum,jdbcType=INTEGER}, 
+      #{originalNum,jdbcType=INTEGER}, #{originalZhuanfaNum,jdbcType=INTEGER}, #{originalPinglunNum,jdbcType=INTEGER}, 
+      #{originalDianzanNum,jdbcType=INTEGER}, #{unitProvince,jdbcType=VARCHAR}, #{unitLevel,jdbcType=INTEGER}, 
+      #{unitFunction,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ebzhi.bangdan.entity.WeiboBangdan" >
+    insert into weibo_bangdan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="yearMonthTime != null" >
+        year_month_time,
+      </if>
+      <if test="unitId != null" >
+        unit_id,
+      </if>
+      <if test="weiboUid != null" >
+        weibo_uid,
+      </if>
+      <if test="nickName != null" >
+        nick_name,
+      </if>
+      <if test="funsNum != null" >
+        funs_num,
+      </if>
+      <if test="guanzhuNum != null" >
+        guanzhu_num,
+      </if>
+      <if test="publishTotal != null" >
+        publish_total,
+      </if>
+      <if test="periodPublishTotal != null" >
+        period_publish_total,
+      </if>
+      <if test="zhuanfaNum != null" >
+        zhuanfa_num,
+      </if>
+      <if test="pinglunNum != null" >
+        pinglun_num,
+      </if>
+      <if test="dianzanNum != null" >
+        dianzan_num,
+      </if>
+      <if test="originalNum != null" >
+        original_num,
+      </if>
+      <if test="originalZhuanfaNum != null" >
+        original_zhuanfa_num,
+      </if>
+      <if test="originalPinglunNum != null" >
+        original_pinglun_num,
+      </if>
+      <if test="originalDianzanNum != null" >
+        original_dianzan_num,
+      </if>
+      <if test="unitProvince != null" >
+        unit_province,
+      </if>
+      <if test="unitLevel != null" >
+        unit_level,
+      </if>
+      <if test="unitFunction != null" >
+        unit_function,
+      </if>
+      <if test="unitName != null" >
+        unit_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="yearMonthTime != null" >
+        #{yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="unitId != null" >
+        #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="weiboUid != null" >
+        #{weiboUid,jdbcType=BIGINT},
+      </if>
+      <if test="nickName != null" >
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="funsNum != null" >
+        #{funsNum,jdbcType=INTEGER},
+      </if>
+      <if test="guanzhuNum != null" >
+        #{guanzhuNum,jdbcType=INTEGER},
+      </if>
+      <if test="publishTotal != null" >
+        #{publishTotal,jdbcType=INTEGER},
+      </if>
+      <if test="periodPublishTotal != null" >
+        #{periodPublishTotal,jdbcType=INTEGER},
+      </if>
+      <if test="zhuanfaNum != null" >
+        #{zhuanfaNum,jdbcType=INTEGER},
+      </if>
+      <if test="pinglunNum != null" >
+        #{pinglunNum,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNum != null" >
+        #{dianzanNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalNum != null" >
+        #{originalNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalZhuanfaNum != null" >
+        #{originalZhuanfaNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalPinglunNum != null" >
+        #{originalPinglunNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalDianzanNum != null" >
+        #{originalDianzanNum,jdbcType=INTEGER},
+      </if>
+      <if test="unitProvince != null" >
+        #{unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="unitLevel != null" >
+        #{unitLevel,jdbcType=INTEGER},
+      </if>
+      <if test="unitFunction != null" >
+        #{unitFunction,jdbcType=VARCHAR},
+      </if>
+      <if test="unitName != null" >
+        #{unitName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ebzhi.bangdan.entity.WeiboBangdanExample" resultType="java.lang.Integer" >
+    select count(*) from weibo_bangdan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update weibo_bangdan
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.yearMonthTime != null" >
+        year_month_time = #{record.yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitId != null" >
+        unit_id = #{record.unitId,jdbcType=INTEGER},
+      </if>
+      <if test="record.weiboUid != null" >
+        weibo_uid = #{record.weiboUid,jdbcType=BIGINT},
+      </if>
+      <if test="record.nickName != null" >
+        nick_name = #{record.nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.funsNum != null" >
+        funs_num = #{record.funsNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.guanzhuNum != null" >
+        guanzhu_num = #{record.guanzhuNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.publishTotal != null" >
+        publish_total = #{record.publishTotal,jdbcType=INTEGER},
+      </if>
+      <if test="record.periodPublishTotal != null" >
+        period_publish_total = #{record.periodPublishTotal,jdbcType=INTEGER},
+      </if>
+      <if test="record.zhuanfaNum != null" >
+        zhuanfa_num = #{record.zhuanfaNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.pinglunNum != null" >
+        pinglun_num = #{record.pinglunNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNum != null" >
+        dianzan_num = #{record.dianzanNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.originalNum != null" >
+        original_num = #{record.originalNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.originalZhuanfaNum != null" >
+        original_zhuanfa_num = #{record.originalZhuanfaNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.originalPinglunNum != null" >
+        original_pinglun_num = #{record.originalPinglunNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.originalDianzanNum != null" >
+        original_dianzan_num = #{record.originalDianzanNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.unitProvince != null" >
+        unit_province = #{record.unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitLevel != null" >
+        unit_level = #{record.unitLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.unitFunction != null" >
+        unit_function = #{record.unitFunction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitName != null" >
+        unit_name = #{record.unitName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update weibo_bangdan
+    set id = #{record.id,jdbcType=INTEGER},
+      year_month_time = #{record.yearMonthTime,jdbcType=VARCHAR},
+      unit_id = #{record.unitId,jdbcType=INTEGER},
+      weibo_uid = #{record.weiboUid,jdbcType=BIGINT},
+      nick_name = #{record.nickName,jdbcType=VARCHAR},
+      funs_num = #{record.funsNum,jdbcType=INTEGER},
+      guanzhu_num = #{record.guanzhuNum,jdbcType=INTEGER},
+      publish_total = #{record.publishTotal,jdbcType=INTEGER},
+      period_publish_total = #{record.periodPublishTotal,jdbcType=INTEGER},
+      zhuanfa_num = #{record.zhuanfaNum,jdbcType=INTEGER},
+      pinglun_num = #{record.pinglunNum,jdbcType=INTEGER},
+      dianzan_num = #{record.dianzanNum,jdbcType=INTEGER},
+      original_num = #{record.originalNum,jdbcType=INTEGER},
+      original_zhuanfa_num = #{record.originalZhuanfaNum,jdbcType=INTEGER},
+      original_pinglun_num = #{record.originalPinglunNum,jdbcType=INTEGER},
+      original_dianzan_num = #{record.originalDianzanNum,jdbcType=INTEGER},
+      unit_province = #{record.unitProvince,jdbcType=VARCHAR},
+      unit_level = #{record.unitLevel,jdbcType=INTEGER},
+      unit_function = #{record.unitFunction,jdbcType=VARCHAR},
+      unit_name = #{record.unitName,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ebzhi.bangdan.entity.WeiboBangdan" >
+    update weibo_bangdan
+    <set >
+      <if test="yearMonthTime != null" >
+        year_month_time = #{yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="unitId != null" >
+        unit_id = #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="weiboUid != null" >
+        weibo_uid = #{weiboUid,jdbcType=BIGINT},
+      </if>
+      <if test="nickName != null" >
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="funsNum != null" >
+        funs_num = #{funsNum,jdbcType=INTEGER},
+      </if>
+      <if test="guanzhuNum != null" >
+        guanzhu_num = #{guanzhuNum,jdbcType=INTEGER},
+      </if>
+      <if test="publishTotal != null" >
+        publish_total = #{publishTotal,jdbcType=INTEGER},
+      </if>
+      <if test="periodPublishTotal != null" >
+        period_publish_total = #{periodPublishTotal,jdbcType=INTEGER},
+      </if>
+      <if test="zhuanfaNum != null" >
+        zhuanfa_num = #{zhuanfaNum,jdbcType=INTEGER},
+      </if>
+      <if test="pinglunNum != null" >
+        pinglun_num = #{pinglunNum,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNum != null" >
+        dianzan_num = #{dianzanNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalNum != null" >
+        original_num = #{originalNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalZhuanfaNum != null" >
+        original_zhuanfa_num = #{originalZhuanfaNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalPinglunNum != null" >
+        original_pinglun_num = #{originalPinglunNum,jdbcType=INTEGER},
+      </if>
+      <if test="originalDianzanNum != null" >
+        original_dianzan_num = #{originalDianzanNum,jdbcType=INTEGER},
+      </if>
+      <if test="unitProvince != null" >
+        unit_province = #{unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="unitLevel != null" >
+        unit_level = #{unitLevel,jdbcType=INTEGER},
+      </if>
+      <if test="unitFunction != null" >
+        unit_function = #{unitFunction,jdbcType=VARCHAR},
+      </if>
+      <if test="unitName != null" >
+        unit_name = #{unitName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ebzhi.bangdan.entity.WeiboBangdan" >
+    update weibo_bangdan
+    set year_month_time = #{yearMonthTime,jdbcType=VARCHAR},
+      unit_id = #{unitId,jdbcType=INTEGER},
+      weibo_uid = #{weiboUid,jdbcType=BIGINT},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      funs_num = #{funsNum,jdbcType=INTEGER},
+      guanzhu_num = #{guanzhuNum,jdbcType=INTEGER},
+      publish_total = #{publishTotal,jdbcType=INTEGER},
+      period_publish_total = #{periodPublishTotal,jdbcType=INTEGER},
+      zhuanfa_num = #{zhuanfaNum,jdbcType=INTEGER},
+      pinglun_num = #{pinglunNum,jdbcType=INTEGER},
+      dianzan_num = #{dianzanNum,jdbcType=INTEGER},
+      original_num = #{originalNum,jdbcType=INTEGER},
+      original_zhuanfa_num = #{originalZhuanfaNum,jdbcType=INTEGER},
+      original_pinglun_num = #{originalPinglunNum,jdbcType=INTEGER},
+      original_dianzan_num = #{originalDianzanNum,jdbcType=INTEGER},
+      unit_province = #{unitProvince,jdbcType=VARCHAR},
+      unit_level = #{unitLevel,jdbcType=INTEGER},
+      unit_function = #{unitFunction,jdbcType=VARCHAR},
+      unit_name = #{unitName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="getWeiboBaseByYearMonth" resultType="com.ebzhi.bangdan.entity.base.WeiboBase">
+  	select MAX(funs_num) as maxFunsNum, MAX(period_publish_total) as maxPeriodPublishTotal, MAX(original_num) as maxOriginalNum, MAX(pinglun_num) as maxPinglunNum, MAX(zhuanfa_num) as maxZhuanfaNum, MAX(dianzan_num) as maxDianzanNum 
+	from weibo_bangdan 
+	where year_month_time = #{yearMonth,jdbcType=VARCHAR}
+	<if test="list != null and list.size > 0">
+		and id in 
+		<foreach collection="list" item="id" open="(" separator="," close=")">
+        	#{id, jdbcType=INTEGER}
+        </foreach>
+	</if>
+  </select>
+</mapper>

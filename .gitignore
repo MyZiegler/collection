@@ -1,0 +1,47 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+classes/
+target/
+out/
+test/
+# Mac OSX
+.DS_Store
+*.tmp
+*.exe
+*.jar
+*.bak
+*.swp
+*~.nib
+*.war
+*.ear
+*.db
+*.log
+# Folder config file
+Desktop.ini
+# Windows image file caches
+Thumbs.db
+# Mac OS Thumbnails
+._*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/

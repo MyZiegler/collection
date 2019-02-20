@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 注解扫描 -->
+	<context:component-scan base-package="com.ebzhi.bangdan.web" />
+
+	<mvc:annotation-driven />
+
+	<!-- 配置视图解析器 -->
+	<!-- <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView"/>
+		使用前缀和后缀
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<property name="suffix" value=".jsp"/>
+		<property name="order" value="1"/>
+	</bean> -->
+	
+	<!-- 配置freeMarker视图解析器 -->
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
+		<property name="cache" value="true"/>
+		<property name="prefix" value=""/>
+		<property name="suffix" value=".html"/>
+		<property name="contentType" value="text/html;charset=UTF-8"/>
+		<property name="order" value="0"/>
+	</bean> -->
+
+	<!--配置上传文件数据解析器 -->
+	<!-- <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize">
+			<value>9242880</value>
+		</property>
+	</bean> -->
+
+	<!-- 静态资源配置 -->
+	<!-- <mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/imgdata/**" location="/imgdata/" /> -->
+
+</beans>

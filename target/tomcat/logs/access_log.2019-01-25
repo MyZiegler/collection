@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [25/Jan/2019:12:48:37 +0800] "GET /jianchaUnit/init HTTP/1.1" 500 16430 http-bio-8080-exec-1 690
+0:0:0:0:0:0:0:1 - - [25/Jan/2019:12:54:50 +0800] "GET /jianchaUnit/init HTTP/1.1" 404 949 http-bio-8080-exec-1 61956
+0:0:0:0:0:0:0:1 - - [25/Jan/2019:17:47:24 +0800] "GET /jianchaUnit/init HTTP/1.1" 500 15149 http-bio-8080-exec-4 58
+0:0:0:0:0:0:0:1 - - [25/Jan/2019:17:59:33 +0800] "GET /jianchaUnit/init HTTP/1.1" 500 14806 http-bio-8080-exec-1 734
+0:0:0:0:0:0:0:1 - - [25/Jan/2019:18:02:18 +0800] "GET /jianchaUnit/init HTTP/1.1" 500 14806 http-bio-8080-exec-1 784
+0:0:0:0:0:0:0:1 - - [25/Jan/2019:18:06:52 +0800] "GET /jianchaUnit/init HTTP/1.1" 404 949 http-bio-8080-exec-1 61546

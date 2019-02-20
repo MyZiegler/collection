@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ebzhi.bangdan.mapper.BangdanScoreMapper" >
+  <resultMap id="BaseResultMap" type="com.ebzhi.bangdan.entity.BangdanScore" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="unit_id" property="unitId" jdbcType="INTEGER" />
+    <result column="unit_province" property="unitProvince" jdbcType="VARCHAR" />
+    <result column="year_month_time" property="yearMonthTime" jdbcType="VARCHAR" />
+    <result column="weibo_score" property="weiboScore" jdbcType="DOUBLE" />
+    <result column="weixin_score" property="weixinScore" jdbcType="DOUBLE" />
+    <result column="total_score" property="totalScore" jdbcType="DOUBLE" />
+    <result column="score_index" property="scoreIndex" jdbcType="INTEGER" />
+    <result column="score_type" property="scoreType" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, unit_id, unit_province, year_month_time, weibo_score, weixin_score, total_score, 
+    score_index, score_type
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ebzhi.bangdan.entity.BangdanScoreExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from bangdan_score
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bangdan_score
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from bangdan_score
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ebzhi.bangdan.entity.BangdanScoreExample" >
+    delete from bangdan_score
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ebzhi.bangdan.entity.BangdanScore" >
+    insert into bangdan_score (id, unit_id, unit_province, 
+      year_month_time, weibo_score, weixin_score, 
+      total_score, score_index, score_type
+      )
+    values (#{id,jdbcType=INTEGER}, #{unitId,jdbcType=INTEGER}, #{unitProvince,jdbcType=VARCHAR}, 
+      #{yearMonthTime,jdbcType=VARCHAR}, #{weiboScore,jdbcType=DOUBLE}, #{weixinScore,jdbcType=DOUBLE}, 
+      #{totalScore,jdbcType=DOUBLE}, #{scoreIndex,jdbcType=INTEGER}, #{scoreType,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ebzhi.bangdan.entity.BangdanScore" >
+    insert into bangdan_score
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="unitId != null" >
+        unit_id,
+      </if>
+      <if test="unitProvince != null" >
+        unit_province,
+      </if>
+      <if test="yearMonthTime != null" >
+        year_month_time,
+      </if>
+      <if test="weiboScore != null" >
+        weibo_score,
+      </if>
+      <if test="weixinScore != null" >
+        weixin_score,
+      </if>
+      <if test="totalScore != null" >
+        total_score,
+      </if>
+      <if test="scoreIndex != null" >
+        score_index,
+      </if>
+      <if test="scoreType != null" >
+        score_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="unitId != null" >
+        #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="unitProvince != null" >
+        #{unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="yearMonthTime != null" >
+        #{yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboScore != null" >
+        #{weiboScore,jdbcType=DOUBLE},
+      </if>
+      <if test="weixinScore != null" >
+        #{weixinScore,jdbcType=DOUBLE},
+      </if>
+      <if test="totalScore != null" >
+        #{totalScore,jdbcType=DOUBLE},
+      </if>
+      <if test="scoreIndex != null" >
+        #{scoreIndex,jdbcType=INTEGER},
+      </if>
+      <if test="scoreType != null" >
+        #{scoreType,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ebzhi.bangdan.entity.BangdanScoreExample" resultType="java.lang.Integer" >
+    select count(*) from bangdan_score
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update bangdan_score
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.unitId != null" >
+        unit_id = #{record.unitId,jdbcType=INTEGER},
+      </if>
+      <if test="record.unitProvince != null" >
+        unit_province = #{record.unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="record.yearMonthTime != null" >
+        year_month_time = #{record.yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weiboScore != null" >
+        weibo_score = #{record.weiboScore,jdbcType=DOUBLE},
+      </if>
+      <if test="record.weixinScore != null" >
+        weixin_score = #{record.weixinScore,jdbcType=DOUBLE},
+      </if>
+      <if test="record.totalScore != null" >
+        total_score = #{record.totalScore,jdbcType=DOUBLE},
+      </if>
+      <if test="record.scoreIndex != null" >
+        score_index = #{record.scoreIndex,jdbcType=INTEGER},
+      </if>
+      <if test="record.scoreType != null" >
+        score_type = #{record.scoreType,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update bangdan_score
+    set id = #{record.id,jdbcType=INTEGER},
+      unit_id = #{record.unitId,jdbcType=INTEGER},
+      unit_province = #{record.unitProvince,jdbcType=VARCHAR},
+      year_month_time = #{record.yearMonthTime,jdbcType=VARCHAR},
+      weibo_score = #{record.weiboScore,jdbcType=DOUBLE},
+      weixin_score = #{record.weixinScore,jdbcType=DOUBLE},
+      total_score = #{record.totalScore,jdbcType=DOUBLE},
+      score_index = #{record.scoreIndex,jdbcType=INTEGER},
+      score_type = #{record.scoreType,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ebzhi.bangdan.entity.BangdanScore" >
+    update bangdan_score
+    <set >
+      <if test="unitId != null" >
+        unit_id = #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="unitProvince != null" >
+        unit_province = #{unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="yearMonthTime != null" >
+        year_month_time = #{yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="weiboScore != null" >
+        weibo_score = #{weiboScore,jdbcType=DOUBLE},
+      </if>
+      <if test="weixinScore != null" >
+        weixin_score = #{weixinScore,jdbcType=DOUBLE},
+      </if>
+      <if test="totalScore != null" >
+        total_score = #{totalScore,jdbcType=DOUBLE},
+      </if>
+      <if test="scoreIndex != null" >
+        score_index = #{scoreIndex,jdbcType=INTEGER},
+      </if>
+      <if test="scoreType != null" >
+        score_type = #{scoreType,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ebzhi.bangdan.entity.BangdanScore" >
+    update bangdan_score
+    set unit_id = #{unitId,jdbcType=INTEGER},
+      unit_province = #{unitProvince,jdbcType=VARCHAR},
+      year_month_time = #{yearMonthTime,jdbcType=VARCHAR},
+      weibo_score = #{weiboScore,jdbcType=DOUBLE},
+      weixin_score = #{weixinScore,jdbcType=DOUBLE},
+      total_score = #{totalScore,jdbcType=DOUBLE},
+      score_index = #{scoreIndex,jdbcType=INTEGER},
+      score_type = #{scoreType,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

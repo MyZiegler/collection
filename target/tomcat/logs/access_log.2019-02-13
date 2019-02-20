@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [13/Feb/2019:15:39:48 +0800] "GET /weixinBangdan/base HTTP/1.1" 200 144 http-bio-8080-exec-1 637
+0:0:0:0:0:0:0:1 - - [13/Feb/2019:15:39:48 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-3 5
+0:0:0:0:0:0:0:1 - - [13/Feb/2019:15:41:12 +0800] "GET /weixinBangdan/base HTTP/1.1" 200 126 http-bio-8080-exec-1 634
+0:0:0:0:0:0:0:1 - - [13/Feb/2019:15:48:28 +0800] "GET /weiboBangdan/base HTTP/1.1" 200 153 http-bio-8080-exec-1 586

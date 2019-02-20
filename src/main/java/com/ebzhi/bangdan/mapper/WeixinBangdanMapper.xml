@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ebzhi.bangdan.mapper.WeixinBangdanMapper" >
+  <resultMap id="BaseResultMap" type="com.ebzhi.bangdan.entity.WeixinBangdan" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="year_month_time" property="yearMonthTime" jdbcType="VARCHAR" />
+    <result column="unit_id" property="unitId" jdbcType="INTEGER" />
+    <result column="weixin_name" property="weixinName" jdbcType="VARCHAR" />
+    <result column="weixin_num" property="weixinNum" jdbcType="VARCHAR" />
+    <result column="article_num" property="articleNum" jdbcType="INTEGER" />
+    <result column="publish_num" property="publishNum" jdbcType="INTEGER" />
+    <result column="read_num_total" property="readNumTotal" jdbcType="INTEGER" />
+    <result column="dianzan_num_total" property="dianzanNumTotal" jdbcType="INTEGER" />
+    <result column="read_num_avg" property="readNumAvg" jdbcType="INTEGER" />
+    <result column="dianzan_num_avg" property="dianzanNumAvg" jdbcType="INTEGER" />
+    <result column="read_num_top" property="readNumTop" jdbcType="INTEGER" />
+    <result column="dianzan_num_top" property="dianzanNumTop" jdbcType="INTEGER" />
+    <result column="read_num_day_avg" property="readNumDayAvg" jdbcType="INTEGER" />
+    <result column="dianzan_num_day_avg" property="dianzanNumDayAvg" jdbcType="INTEGER" />
+    <result column="toutiao_read_num_total" property="toutiaoReadNumTotal" jdbcType="INTEGER" />
+    <result column="toutiao_dianzan_num_total" property="toutiaoDianzanNumTotal" jdbcType="INTEGER" />
+    <result column="toutiao_read_num_avg" property="toutiaoReadNumAvg" jdbcType="INTEGER" />
+    <result column="toutiao_dianzan_num_avg" property="toutiaoDianzanNumAvg" jdbcType="INTEGER" />
+    <result column="toutiao_read_num_day_avg" property="toutiaoReadNumDayAvg" jdbcType="INTEGER" />
+    <result column="toutiao_dianzan_num_day_avg" property="toutiaoDianzanNumDayAvg" jdbcType="INTEGER" />
+    <result column="original_num" property="originalNum" jdbcType="INTEGER" />
+    <result column="unit_province" property="unitProvince" jdbcType="VARCHAR" />
+    <result column="unit_level" property="unitLevel" jdbcType="INTEGER" />
+    <result column="unit_function" property="unitFunction" jdbcType="VARCHAR" />
+    <result column="unit_name" property="unitName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, year_month_time, unit_id, weixin_name, weixin_num, article_num, publish_num, 
+    read_num_total, dianzan_num_total, read_num_avg, dianzan_num_avg, read_num_top, dianzan_num_top, 
+    read_num_day_avg, dianzan_num_day_avg, toutiao_read_num_total, toutiao_dianzan_num_total, 
+    toutiao_read_num_avg, toutiao_dianzan_num_avg, toutiao_read_num_day_avg, toutiao_dianzan_num_day_avg, 
+    original_num, unit_province, unit_level, unit_function, unit_name
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ebzhi.bangdan.entity.WeixinBangdanExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from weixin_bangdan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from weixin_bangdan
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from weixin_bangdan
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ebzhi.bangdan.entity.WeixinBangdanExample" >
+    delete from weixin_bangdan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ebzhi.bangdan.entity.WeixinBangdan" >
+    insert into weixin_bangdan (id, year_month_time, unit_id, 
+      weixin_name, weixin_num, article_num, 
+      publish_num, read_num_total, dianzan_num_total, 
+      read_num_avg, dianzan_num_avg, read_num_top, 
+      dianzan_num_top, read_num_day_avg, dianzan_num_day_avg, 
+      toutiao_read_num_total, toutiao_dianzan_num_total, 
+      toutiao_read_num_avg, toutiao_dianzan_num_avg, 
+      toutiao_read_num_day_avg, toutiao_dianzan_num_day_avg, 
+      original_num, unit_province, unit_level, 
+      unit_function, unit_name)
+    values (#{id,jdbcType=INTEGER}, #{yearMonthTime,jdbcType=VARCHAR}, #{unitId,jdbcType=INTEGER}, 
+      #{weixinName,jdbcType=VARCHAR}, #{weixinNum,jdbcType=VARCHAR}, #{articleNum,jdbcType=INTEGER}, 
+      #{publishNum,jdbcType=INTEGER}, #{readNumTotal,jdbcType=INTEGER}, #{dianzanNumTotal,jdbcType=INTEGER}, 
+      #{readNumAvg,jdbcType=INTEGER}, #{dianzanNumAvg,jdbcType=INTEGER}, #{readNumTop,jdbcType=INTEGER}, 
+      #{dianzanNumTop,jdbcType=INTEGER}, #{readNumDayAvg,jdbcType=INTEGER}, #{dianzanNumDayAvg,jdbcType=INTEGER}, 
+      #{toutiaoReadNumTotal,jdbcType=INTEGER}, #{toutiaoDianzanNumTotal,jdbcType=INTEGER}, 
+      #{toutiaoReadNumAvg,jdbcType=INTEGER}, #{toutiaoDianzanNumAvg,jdbcType=INTEGER}, 
+      #{toutiaoReadNumDayAvg,jdbcType=INTEGER}, #{toutiaoDianzanNumDayAvg,jdbcType=INTEGER}, 
+      #{originalNum,jdbcType=INTEGER}, #{unitProvince,jdbcType=VARCHAR}, #{unitLevel,jdbcType=INTEGER}, 
+      #{unitFunction,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ebzhi.bangdan.entity.WeixinBangdan" >
+    insert into weixin_bangdan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="yearMonthTime != null" >
+        year_month_time,
+      </if>
+      <if test="unitId != null" >
+        unit_id,
+      </if>
+      <if test="weixinName != null" >
+        weixin_name,
+      </if>
+      <if test="weixinNum != null" >
+        weixin_num,
+      </if>
+      <if test="articleNum != null" >
+        article_num,
+      </if>
+      <if test="publishNum != null" >
+        publish_num,
+      </if>
+      <if test="readNumTotal != null" >
+        read_num_total,
+      </if>
+      <if test="dianzanNumTotal != null" >
+        dianzan_num_total,
+      </if>
+      <if test="readNumAvg != null" >
+        read_num_avg,
+      </if>
+      <if test="dianzanNumAvg != null" >
+        dianzan_num_avg,
+      </if>
+      <if test="readNumTop != null" >
+        read_num_top,
+      </if>
+      <if test="dianzanNumTop != null" >
+        dianzan_num_top,
+      </if>
+      <if test="readNumDayAvg != null" >
+        read_num_day_avg,
+      </if>
+      <if test="dianzanNumDayAvg != null" >
+        dianzan_num_day_avg,
+      </if>
+      <if test="toutiaoReadNumTotal != null" >
+        toutiao_read_num_total,
+      </if>
+      <if test="toutiaoDianzanNumTotal != null" >
+        toutiao_dianzan_num_total,
+      </if>
+      <if test="toutiaoReadNumAvg != null" >
+        toutiao_read_num_avg,
+      </if>
+      <if test="toutiaoDianzanNumAvg != null" >
+        toutiao_dianzan_num_avg,
+      </if>
+      <if test="toutiaoReadNumDayAvg != null" >
+        toutiao_read_num_day_avg,
+      </if>
+      <if test="toutiaoDianzanNumDayAvg != null" >
+        toutiao_dianzan_num_day_avg,
+      </if>
+      <if test="originalNum != null" >
+        original_num,
+      </if>
+      <if test="unitProvince != null" >
+        unit_province,
+      </if>
+      <if test="unitLevel != null" >
+        unit_level,
+      </if>
+      <if test="unitFunction != null" >
+        unit_function,
+      </if>
+      <if test="unitName != null" >
+        unit_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="yearMonthTime != null" >
+        #{yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="unitId != null" >
+        #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="weixinName != null" >
+        #{weixinName,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinNum != null" >
+        #{weixinNum,jdbcType=VARCHAR},
+      </if>
+      <if test="articleNum != null" >
+        #{articleNum,jdbcType=INTEGER},
+      </if>
+      <if test="publishNum != null" >
+        #{publishNum,jdbcType=INTEGER},
+      </if>
+      <if test="readNumTotal != null" >
+        #{readNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumTotal != null" >
+        #{dianzanNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="readNumAvg != null" >
+        #{readNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumAvg != null" >
+        #{dianzanNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="readNumTop != null" >
+        #{readNumTop,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumTop != null" >
+        #{dianzanNumTop,jdbcType=INTEGER},
+      </if>
+      <if test="readNumDayAvg != null" >
+        #{readNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumDayAvg != null" >
+        #{dianzanNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoReadNumTotal != null" >
+        #{toutiaoReadNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoDianzanNumTotal != null" >
+        #{toutiaoDianzanNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoReadNumAvg != null" >
+        #{toutiaoReadNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoDianzanNumAvg != null" >
+        #{toutiaoDianzanNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoReadNumDayAvg != null" >
+        #{toutiaoReadNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoDianzanNumDayAvg != null" >
+        #{toutiaoDianzanNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="originalNum != null" >
+        #{originalNum,jdbcType=INTEGER},
+      </if>
+      <if test="unitProvince != null" >
+        #{unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="unitLevel != null" >
+        #{unitLevel,jdbcType=INTEGER},
+      </if>
+      <if test="unitFunction != null" >
+        #{unitFunction,jdbcType=VARCHAR},
+      </if>
+      <if test="unitName != null" >
+        #{unitName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ebzhi.bangdan.entity.WeixinBangdanExample" resultType="java.lang.Integer" >
+    select count(*) from weixin_bangdan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update weixin_bangdan
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.yearMonthTime != null" >
+        year_month_time = #{record.yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitId != null" >
+        unit_id = #{record.unitId,jdbcType=INTEGER},
+      </if>
+      <if test="record.weixinName != null" >
+        weixin_name = #{record.weixinName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weixinNum != null" >
+        weixin_num = #{record.weixinNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.articleNum != null" >
+        article_num = #{record.articleNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.publishNum != null" >
+        publish_num = #{record.publishNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.readNumTotal != null" >
+        read_num_total = #{record.readNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNumTotal != null" >
+        dianzan_num_total = #{record.dianzanNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="record.readNumAvg != null" >
+        read_num_avg = #{record.readNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNumAvg != null" >
+        dianzan_num_avg = #{record.dianzanNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.readNumTop != null" >
+        read_num_top = #{record.readNumTop,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNumTop != null" >
+        dianzan_num_top = #{record.dianzanNumTop,jdbcType=INTEGER},
+      </if>
+      <if test="record.readNumDayAvg != null" >
+        read_num_day_avg = #{record.readNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.dianzanNumDayAvg != null" >
+        dianzan_num_day_avg = #{record.dianzanNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.toutiaoReadNumTotal != null" >
+        toutiao_read_num_total = #{record.toutiaoReadNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="record.toutiaoDianzanNumTotal != null" >
+        toutiao_dianzan_num_total = #{record.toutiaoDianzanNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="record.toutiaoReadNumAvg != null" >
+        toutiao_read_num_avg = #{record.toutiaoReadNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.toutiaoDianzanNumAvg != null" >
+        toutiao_dianzan_num_avg = #{record.toutiaoDianzanNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.toutiaoReadNumDayAvg != null" >
+        toutiao_read_num_day_avg = #{record.toutiaoReadNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.toutiaoDianzanNumDayAvg != null" >
+        toutiao_dianzan_num_day_avg = #{record.toutiaoDianzanNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="record.originalNum != null" >
+        original_num = #{record.originalNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.unitProvince != null" >
+        unit_province = #{record.unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitLevel != null" >
+        unit_level = #{record.unitLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.unitFunction != null" >
+        unit_function = #{record.unitFunction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitName != null" >
+        unit_name = #{record.unitName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update weixin_bangdan
+    set id = #{record.id,jdbcType=INTEGER},
+      year_month_time = #{record.yearMonthTime,jdbcType=VARCHAR},
+      unit_id = #{record.unitId,jdbcType=INTEGER},
+      weixin_name = #{record.weixinName,jdbcType=VARCHAR},
+      weixin_num = #{record.weixinNum,jdbcType=VARCHAR},
+      article_num = #{record.articleNum,jdbcType=INTEGER},
+      publish_num = #{record.publishNum,jdbcType=INTEGER},
+      read_num_total = #{record.readNumTotal,jdbcType=INTEGER},
+      dianzan_num_total = #{record.dianzanNumTotal,jdbcType=INTEGER},
+      read_num_avg = #{record.readNumAvg,jdbcType=INTEGER},
+      dianzan_num_avg = #{record.dianzanNumAvg,jdbcType=INTEGER},
+      read_num_top = #{record.readNumTop,jdbcType=INTEGER},
+      dianzan_num_top = #{record.dianzanNumTop,jdbcType=INTEGER},
+      read_num_day_avg = #{record.readNumDayAvg,jdbcType=INTEGER},
+      dianzan_num_day_avg = #{record.dianzanNumDayAvg,jdbcType=INTEGER},
+      toutiao_read_num_total = #{record.toutiaoReadNumTotal,jdbcType=INTEGER},
+      toutiao_dianzan_num_total = #{record.toutiaoDianzanNumTotal,jdbcType=INTEGER},
+      toutiao_read_num_avg = #{record.toutiaoReadNumAvg,jdbcType=INTEGER},
+      toutiao_dianzan_num_avg = #{record.toutiaoDianzanNumAvg,jdbcType=INTEGER},
+      toutiao_read_num_day_avg = #{record.toutiaoReadNumDayAvg,jdbcType=INTEGER},
+      toutiao_dianzan_num_day_avg = #{record.toutiaoDianzanNumDayAvg,jdbcType=INTEGER},
+      original_num = #{record.originalNum,jdbcType=INTEGER},
+      unit_province = #{record.unitProvince,jdbcType=VARCHAR},
+      unit_level = #{record.unitLevel,jdbcType=INTEGER},
+      unit_function = #{record.unitFunction,jdbcType=VARCHAR},
+      unit_name = #{record.unitName,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ebzhi.bangdan.entity.WeixinBangdan" >
+    update weixin_bangdan
+    <set >
+      <if test="yearMonthTime != null" >
+        year_month_time = #{yearMonthTime,jdbcType=VARCHAR},
+      </if>
+      <if test="unitId != null" >
+        unit_id = #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="weixinName != null" >
+        weixin_name = #{weixinName,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinNum != null" >
+        weixin_num = #{weixinNum,jdbcType=VARCHAR},
+      </if>
+      <if test="articleNum != null" >
+        article_num = #{articleNum,jdbcType=INTEGER},
+      </if>
+      <if test="publishNum != null" >
+        publish_num = #{publishNum,jdbcType=INTEGER},
+      </if>
+      <if test="readNumTotal != null" >
+        read_num_total = #{readNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumTotal != null" >
+        dianzan_num_total = #{dianzanNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="readNumAvg != null" >
+        read_num_avg = #{readNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumAvg != null" >
+        dianzan_num_avg = #{dianzanNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="readNumTop != null" >
+        read_num_top = #{readNumTop,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumTop != null" >
+        dianzan_num_top = #{dianzanNumTop,jdbcType=INTEGER},
+      </if>
+      <if test="readNumDayAvg != null" >
+        read_num_day_avg = #{readNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="dianzanNumDayAvg != null" >
+        dianzan_num_day_avg = #{dianzanNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoReadNumTotal != null" >
+        toutiao_read_num_total = #{toutiaoReadNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoDianzanNumTotal != null" >
+        toutiao_dianzan_num_total = #{toutiaoDianzanNumTotal,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoReadNumAvg != null" >
+        toutiao_read_num_avg = #{toutiaoReadNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoDianzanNumAvg != null" >
+        toutiao_dianzan_num_avg = #{toutiaoDianzanNumAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoReadNumDayAvg != null" >
+        toutiao_read_num_day_avg = #{toutiaoReadNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="toutiaoDianzanNumDayAvg != null" >
+        toutiao_dianzan_num_day_avg = #{toutiaoDianzanNumDayAvg,jdbcType=INTEGER},
+      </if>
+      <if test="originalNum != null" >
+        original_num = #{originalNum,jdbcType=INTEGER},
+      </if>
+      <if test="unitProvince != null" >
+        unit_province = #{unitProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="unitLevel != null" >
+        unit_level = #{unitLevel,jdbcType=INTEGER},
+      </if>
+      <if test="unitFunction != null" >
+        unit_function = #{unitFunction,jdbcType=VARCHAR},
+      </if>
+      <if test="unitName != null" >
+        unit_name = #{unitName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ebzhi.bangdan.entity.WeixinBangdan" >
+    update weixin_bangdan
+    set year_month_time = #{yearMonthTime,jdbcType=VARCHAR},
+      unit_id = #{unitId,jdbcType=INTEGER},
+      weixin_name = #{weixinName,jdbcType=VARCHAR},
+      weixin_num = #{weixinNum,jdbcType=VARCHAR},
+      article_num = #{articleNum,jdbcType=INTEGER},
+      publish_num = #{publishNum,jdbcType=INTEGER},
+      read_num_total = #{readNumTotal,jdbcType=INTEGER},
+      dianzan_num_total = #{dianzanNumTotal,jdbcType=INTEGER},
+      read_num_avg = #{readNumAvg,jdbcType=INTEGER},
+      dianzan_num_avg = #{dianzanNumAvg,jdbcType=INTEGER},
+      read_num_top = #{readNumTop,jdbcType=INTEGER},
+      dianzan_num_top = #{dianzanNumTop,jdbcType=INTEGER},
+      read_num_day_avg = #{readNumDayAvg,jdbcType=INTEGER},
+      dianzan_num_day_avg = #{dianzanNumDayAvg,jdbcType=INTEGER},
+      toutiao_read_num_total = #{toutiaoReadNumTotal,jdbcType=INTEGER},
+      toutiao_dianzan_num_total = #{toutiaoDianzanNumTotal,jdbcType=INTEGER},
+      toutiao_read_num_avg = #{toutiaoReadNumAvg,jdbcType=INTEGER},
+      toutiao_dianzan_num_avg = #{toutiaoDianzanNumAvg,jdbcType=INTEGER},
+      toutiao_read_num_day_avg = #{toutiaoReadNumDayAvg,jdbcType=INTEGER},
+      toutiao_dianzan_num_day_avg = #{toutiaoDianzanNumDayAvg,jdbcType=INTEGER},
+      original_num = #{originalNum,jdbcType=INTEGER},
+      unit_province = #{unitProvince,jdbcType=VARCHAR},
+      unit_level = #{unitLevel,jdbcType=INTEGER},
+      unit_function = #{unitFunction,jdbcType=VARCHAR},
+      unit_name = #{unitName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="getWeixinBaseByYearMonth" resultType="com.ebzhi.bangdan.entity.base.WeixinBase">
+  	select MAX(article_num) as maxArticleNum, MAX(publish_num) as maxPublishNum, MAX(read_num_avg) as maxReadNumAvg, MAX(dianzan_num_avg) as maxDianzanNumAvg, MAX(read_num_top) as maxReadNumTop, MAX(dianzan_num_top) as maxDianzanNumTop 
+	from weixin_bangdan 
+	where year_month_time = #{yearMonth,jdbcType=VARCHAR}
+	<if test="list != null and list.size > 0">
+		and id in 
+		<foreach collection="list" item="id" open="(" separator="," close=")">
+        	#{id, jdbcType=INTEGER}
+        </foreach>
+	</if>
+  </select>
+</mapper>
