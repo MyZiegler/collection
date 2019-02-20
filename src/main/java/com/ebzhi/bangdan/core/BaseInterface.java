@@ -1,17 +1,12 @@
 package com.ebzhi.bangdan.core;
 
+import com.ebzhi.bangdan.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.ebzhi.bangdan.service.BangdanScoreService;
-import com.ebzhi.bangdan.service.JianchaUnitService;
-import com.ebzhi.bangdan.service.WeiboBangdanService;
-import com.ebzhi.bangdan.service.WeixinBangdanService;
 
 /**
  *	项目Service接口集合
  */
-public class
-BaseInterface {
+public class BaseInterface {
 	
 	@Autowired
 	protected WeiboBangdanService weiboBangdanService;
@@ -24,5 +19,8 @@ BaseInterface {
 	
 	@Autowired
 	protected JianchaUnitService jianchaUnitService;
+
+	@Autowired
+	protected WeightService weightService;
 	
 }

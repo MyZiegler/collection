@@ -2,211 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="672fbc64-b41e-45cc-8ae7-b661938eb78e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.classpath" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/collection_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/collection_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_37.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.project" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.prefs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.validation.prefs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/collection.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/Test.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/BaseInterface.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/ScoreCompute.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/ScoreCompute_bak.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/BangdanScore.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/BangdanScoreExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/JianchaUnit.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/JianchaUnitExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeiboBangdan.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeiboBangdanExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeiboWeight.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeiboWeightExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinBangdan.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinBangdanExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinWeight.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinWeightExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/Zhongjian.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/base/WeiboBase.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/base/WeixinBase.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/BangdanScoreMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/BangdanScoreMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/JianchaUnitMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/JianchaUnitMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeiboBangdanMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeiboBangdanMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeiboWeightMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeiboWeightMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeixinBangdanMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeixinBangdanMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeixinWeightMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/mapper/WeixinWeightMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/BangdanScoreService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/JianchaUnitService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeiboBangdanService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeixinBangdanService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/base/BaseService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/BangdanScoreImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/JianchaUnitServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/WeiboBangdanServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/WeixinBangdanServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/BangdanScoreController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/JianchaUnitController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/WeiboBangdanController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/WeixinBangdanController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/base/BaseController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/SqlMapConfig.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/springframework/applicationContext-mvc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/springframework/applicationContext-mybatis.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/springframework/applicationContext-redis.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/springframework/applicationContext-service.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/springframework/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/Test.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/core/BaseInterface.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/core/ScoreCompute.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/core/ScoreCompute_bak.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/BangdanScore.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/BangdanScoreExample$Criteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/BangdanScoreExample$Criterion.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/BangdanScoreExample$GeneratedCriteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/BangdanScoreExample.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/JianchaUnit.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/JianchaUnitExample$Criteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/JianchaUnitExample$Criterion.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/JianchaUnitExample$GeneratedCriteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/JianchaUnitExample.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboBangdan.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboBangdanExample$Criteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboBangdanExample$Criterion.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboBangdanExample$GeneratedCriteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboBangdanExample.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboWeight.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboWeightExample$Criteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboWeightExample$Criterion.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboWeightExample$GeneratedCriteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeiboWeightExample.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinBangdan.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinBangdanExample$Criteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinBangdanExample$Criterion.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinBangdanExample$GeneratedCriteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinBangdanExample.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinWeight.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinWeightExample$Criteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinWeightExample$Criterion.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinWeightExample$GeneratedCriteria.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/WeixinWeightExample.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/base/WeiboBase.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/entity/base/WeixinBase.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/BangdanScoreMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/BangdanScoreMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/JianchaUnitMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/JianchaUnitMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeiboBangdanMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeiboBangdanMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeiboWeightMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeiboWeightMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeixinBangdanMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeixinBangdanMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeixinWeightMapper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/mapper/WeixinWeightMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/BangdanScoreService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/JianchaUnitService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/WeiboBangdanService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/WeixinBangdanService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/base/BaseService.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/impl/BangdanScoreImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/impl/JianchaUnitServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/impl/WeiboBangdanServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/service/impl/WeixinBangdanServiceImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/web/controller/BangdanScoreController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/web/controller/JianchaUnitController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/web/controller/WeiboBangdanController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/web/controller/WeixinBangdanController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/ebzhi/bangdan/web/controller/base/BaseController.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mybatis/SqlMapConfig.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/springframework/applicationContext-mvc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/springframework/applicationContext-mybatis.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/springframework/applicationContext-redis.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/springframework/applicationContext-service.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/springframework/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/m2e-jee/web-resources/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/m2e-jee/web-resources/META-INF/maven/com.ebzhi/collection/pom.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/m2e-jee/web-resources/META-INF/maven/com.ebzhi/collection/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.ebzhi/collection/pom.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.ebzhi/collection/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-25" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-27" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-28" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-02-13" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeightService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/WeightServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/WeightController.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/BaseInterface.java" afterPath="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/BaseInterface.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -218,27 +18,122 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WeixinWeight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinWeight.java">
+      <file leaf-file-name="BangdanScoreController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/BangdanScoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            <state relative-caret-position="195">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding>
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/BaseInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="WeightService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeightService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeightServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/WeightServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JianchaUnitService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/JianchaUnitService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeiboBangdanService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeiboBangdanService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScoreCompute.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/ScoreCompute.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/base/BaseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BangdanScoreService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/BangdanScoreService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-429">
+              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeixinBangdanService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeixinBangdanService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -248,11 +143,38 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/WeightController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/base/BaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/WeightServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/BaseInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeightService.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="collection" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="collection" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="327" />
@@ -289,7 +211,127 @@
             <path>
               <item name="collection" type="b2602c69:ProjectViewProjectNode" />
               <item name="collection" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebzhi" type="462c0819:PsiDirectoryNode" />
+              <item name="bangdan" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,6 +347,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ebzhi.bangdan.service.impl" />
+      <recent name="com.ebzhi.bangdan.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\workFile\test\collection" />
     </key>
@@ -418,12 +464,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550654727081</updated>
       <workItem from="1550654728583" duration="183000" />
-      <workItem from="1550654939642" duration="272000" />
+      <workItem from="1550654939642" duration="1557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455000" />
+    <option name="totallyTimeSpent" value="1740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -436,7 +482,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -488,18 +534,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinWeight.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="286">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/entity/WeixinWeight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-663">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/base/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/BangdanScoreImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/WeightController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/web/controller/BangdanScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/ScoreCompute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/BangdanScoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeixinBangdanService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeiboBangdanService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/JianchaUnitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/base/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/impl/WeightServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/core/BaseInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebzhi/bangdan/service/WeightService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
